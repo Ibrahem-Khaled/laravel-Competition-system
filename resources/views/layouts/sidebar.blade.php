@@ -66,13 +66,14 @@
         <div id="collapsePages3" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">الصفحة المسابقة:</h6>
-                <a class="collapse-item" href="">
-                    <i class="fas fa-fw fa-tv"></i>
-                    <span>السلايدر</span>
+
+                <a class="collapse-item" href="{{ route('questions.index') }}">
+                    <i class="fas fa-fw fa-question"></i>
+                    <span>الاسئلة المسابقة</span>
                 </a>
-                <a class="collapse-item" href="">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>الداعمين</span>
+                <a class="collapse-item" href="{{ route('competitions.index') }}">
+                    <i class="fas fa-fw fa-contest"></i>
+                    <span>المسابقات</span>
                 </a>
             </div>
         </div>
