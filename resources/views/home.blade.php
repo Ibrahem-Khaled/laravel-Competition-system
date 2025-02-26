@@ -73,12 +73,12 @@
                             <div class="service-count-blk">
                                 <div class="coach-count" style="margin: 10px">
                                     <h3>المشاركين</h3>
-                                    <h2><span class="counter-up">{{ $UsersWinnerCont }}</span>+</h2>
+                                    <h2><span class="counter-up">{{ $allUsers }}</span>+</h2>
                                     <h4>عدد اجمالي الفائزين في المسابقة</h4>
                                 </div>
                                 <div class="coach-count coart-count">
                                     <h3>الفائزين</h3>
-                                    <h2><span class="counter-up">{{ $allUsers }}</span>+</h2>
+                                    <h2><span class="counter-up">{{ $UsersWinnerCont }}</span>+</h2>
                                     <h4>عدد المشاركين في المسابقة</h4>
                                 </div>
                             </div>
