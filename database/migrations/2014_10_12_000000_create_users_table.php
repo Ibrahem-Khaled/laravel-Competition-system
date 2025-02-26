@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('country')->default('Saudi Arabia');
             $table->string('city')->nullable();
             $table->string('address')->nullable();
-            $table->enum('role', ['user', 'admin', 'super-admin', 'moderator'])->default('user');
+            $table->enum('role', ['user', 'admin', 'super-admin', 'moderator','supporter'])->default('user');
             $table->boolean('is_active')->default(value: 1);
             $table->boolean('is_winner')->default(0);
             $table->timestamp('email_verified_at')->nullable();

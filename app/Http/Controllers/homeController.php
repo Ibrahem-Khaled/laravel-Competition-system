@@ -4,13 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Question;
 use App\Models\User;
+use App\Models\View;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $allUsers = User::where('role', 'user')->get()->count();
+        $UsersWinnerCont = User::whereHas('competitions')->get()->count();
+
+        View::create([
+            'ip' => request()->ip(),
+            'device' => request()->header('User-Agent'),
+            'browser' => request()->header('User-Agent'),
+            'platform' => request()->header('User-Agent'),
+        ]);
+
+        return view('home', compact('allUsers', 'UsersWinnerCont'));
     }
     public function selectRamadanUsers()
     {

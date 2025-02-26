@@ -71,14 +71,14 @@
                         <div class="best-service-img aos" data-aos="fade-up">
                             <img src="{{ asset('assets2/img/best-service.jpg') }}" class="img-fluid" alt="Service">
                             <div class="service-count-blk">
-                                <div class="coach-count">
+                                <div class="coach-count" style="margin: 10px">
                                     <h3>المشاركين</h3>
-                                    <h2><span class="counter-up">88</span>+</h2>
+                                    <h2><span class="counter-up">{{ $UsersWinnerCont }}</span>+</h2>
                                     <h4>عدد اجمالي الفائزين في المسابقة</h4>
                                 </div>
                                 <div class="coach-count coart-count">
                                     <h3>الفائزين</h3>
-                                    <h2><span class="counter-up">59</span>+</h2>
+                                    <h2><span class="counter-up">{{ $allUsers }}</span>+</h2>
                                     <h4>عدد المشاركين في المسابقة</h4>
                                 </div>
                             </div>

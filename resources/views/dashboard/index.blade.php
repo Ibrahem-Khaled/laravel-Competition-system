@@ -11,7 +11,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5 class="mb-1">المسجلين</h5>
-                                <h2 class="font-weight-bold">48,723</h2>
+                                <h2 class="font-weight-bold">{{ $allUsers }}</h2>
                                 <span class="badge bg-white text-primary">+12% عن الشهر الماضي</span>
                             </div>
                             <div class="icon icon-shape bg-white shadow rounded-circle">
@@ -32,7 +32,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5 class="mb-1">الرعاة</h5>
-                                <h2 class="font-weight-bold">2,345</h2>
+                                <h2 class="font-weight-bold">{{ $supportersCont }}</h2>
                                 <span class="badge bg-white text-success">+8 شركات جديدة</span>
                             </div>
                             <div class="icon icon-shape bg-white shadow rounded-circle">
@@ -53,7 +53,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5 class="mb-1">الفائزين</h5>
-                                <h2 class="font-weight-bold">1,234</h2>
+                                <h2 class="font-weight-bold">{{ $UsersWinnerCont }}</h2>
                                 <span class="badge bg-white text-warning">+5 فائزين هذا الأسبوع</span>
                             </div>
                             <div class="icon icon-shape bg-white shadow rounded-circle">
@@ -74,7 +74,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5 class="mb-1">زوار الموقع</h5>
-                                <h2 class="font-weight-bold">1.2M</h2>
+                                <h2 class="font-weight-bold">{{ $vestorsCont }}</h2>
                                 <span class="badge bg-white text-danger">+20% عن الشهر الماضي</span>
                             </div>
                             <div class="icon icon-shape bg-white shadow rounded-circle">

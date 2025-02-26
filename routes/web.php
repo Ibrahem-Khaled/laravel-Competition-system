@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashboard\competitionController;
+use App\Http\Controllers\dashboard\mainControllers;
 use App\Http\Controllers\dashboard\QuestionController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
@@ -36,9 +37,7 @@ Route::get('/register', function () {
 
 Route::group(['prefix' => 'dashboard'], function () {
 
-    Route::get('/', function () {
-        return view('dashboard.index');
-    })->name('home.dashboard');
+    Route::get('/', [mainControllers::class, 'index'])->name('home.dashboard');
 
     Route::resources(['questions' => QuestionController::class]);
     Route::put('questions/{question}/update-status', [QuestionController::class, 'updateStatus'])->name('questions.updateStatus');
