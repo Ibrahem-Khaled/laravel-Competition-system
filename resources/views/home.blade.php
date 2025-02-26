@@ -60,6 +60,7 @@
 
         <!-- Best Services -->
         <section class="section best-services">
+            @include('components.alerts')
             <div class="container">
                 <div class="section-heading aos" data-aos="fade-up">
                     <h2>العدسة الاعلامية <span>مع الدكتور فهد تخلق الفرق </span></h2>
@@ -90,7 +91,8 @@
                             <div class="faq-info">
                                 <div class="accordion" id="accordionExample">
 
-                                    <form method="POST">
+                                    <form method="POST" action="{{ route('add-user') }}">
+                                        @csrf
                                         <!-- حقل الاسم الكامل -->
                                         <div class="form-group mb-3">
                                             <div class="position-relative">

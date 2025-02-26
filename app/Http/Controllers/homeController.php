@@ -17,6 +17,25 @@ class homeController extends Controller
         return view('select-ramadan-users');
     }
 
+    public function addUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required|numeric|digits:10|unique:users,phone',
+            'city' => 'required',
+        ], [
+            'name.required' => 'يرجى إدخال اسم المستخدم.',
+            'phone.required' => 'يرجى إدخال رقم الهاتف.',
+            'phone.numeric' => 'يجب أن يكون رقم الهاتف رقمًا.',
+            'phone.digits' => 'يجب أن يتكون رقم الهاتف من 10 أرقام.',
+            'phone.unique' => 'رقم الهاتف موجود بالفعل.',
+            'city.required' => 'يرجى إدخال اسم المدينة.'
+        ]);
+
+        User::create($request->all());
+        return redirect()->back()->with('success', 'تم إضافة المستخدم بنجاح.');
+    }
+
     // جلب مستخدم عشوائي
     public function getRandomUser()
     {

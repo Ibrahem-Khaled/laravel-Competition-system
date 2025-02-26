@@ -1,6 +1,6 @@
 <div class="form-group mb-3">
     <div class="position-relative">
-        <select class="form-select ps-5 text-end" name="city" dir="rtl">
+        <select class="form-select ps-5 text-end" name="city" dir="rtl" required>
             <option value="">اختر المدينة</option>
 
             <!-- منطقة الرياض -->
