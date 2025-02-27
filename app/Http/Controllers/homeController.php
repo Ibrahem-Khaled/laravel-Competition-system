@@ -23,6 +23,11 @@ class homeController extends Controller
 
         return view('home', compact('allUsers', 'UsersWinnerCont'));
     }
+
+    public function info()
+    {
+        return view('info');
+    }
     public function selectRamadanUsers()
     {
         return view('select-ramadan-users');

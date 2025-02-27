@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [homeController::class, 'index'])->name('home');
+Route::get('/info', [homeController::class, 'info'])->name('info');
 Route::post('/add-user', [homeController::class, 'addUser'])->name('add-user');
 Route::get('/questions/{user}', [homeController::class, 'questions'])->name('questions');
 Route::get('/ramadan', [homeController::class, 'selectRamadanUsers'])->name('ramadan.index');
